@@ -1,0 +1,30 @@
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand calendar" href="#">CALENDAR</a>
+  <div id='top'>
+
+    <div style='float:left'>
+      Timezone:
+      <select id='time-zone-selector'>
+        <option value='local'>local</option>
+        <option value='UTC' selected>UTC</option>
+      </select>
+    </div>
+
+    <div style='float:right'>
+      <span id='loading'></span>
+    </div>
+
+  </div>
+
+  <button  (click)="toggleWeekends()" class="btn btn-outline-light">Toggle Weekends</button>
+</nav>
+<div class="container">
+  <full-calendar [options]="calendarOptions"></full-calendar>
+
+</div>
+</body>
+
